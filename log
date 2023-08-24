@@ -248,3 +248,56 @@ list.c:132:14: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 3cf9a77
+Thu 24 Aug 2023 02:59:47 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:114:3: error: parameter names (without types) in function declaration [-Werror]
+  114 |   Node* currentNode(data);
+      |   ^~~~
+list.c:115:25: error: request for member ‘data’ in something not a structure or union
+  115 |   void* data=currentNode->data;
+      |                         ^~
+list.c:116:18: error: request for member ‘prev’ in something not a structure or union
+  116 |   if (currentNode->prev!=NULL){
+      |                  ^~
+list.c:117:16: error: request for member ‘prev’ in something not a structure or union
+  117 |     currentNode->prev->next=currentNode->next;
+      |                ^~
+list.c:117:40: error: request for member ‘next’ in something not a structure or union
+  117 |     currentNode->prev->next=currentNode->next;
+      |                                        ^~
+list.c:119:27: error: request for member ‘next’ in something not a structure or union
+  119 |     list->head=currentNode->next;
+      |                           ^~
+list.c:121:17: error: request for member ‘next’ in something not a structure or union
+  121 |   if(currentNode->next!=NULL){
+      |                 ^~
+list.c:122:16: error: request for member ‘next’ in something not a structure or union
+  122 |     currentNode->next->prev=currentNode->prev;
+      |                ^~
+list.c:122:40: error: request for member ‘prev’ in something not a structure or union
+  122 |     currentNode->next->prev=currentNode->prev;
+      |                                        ^~
+list.c:124:27: error: request for member ‘prev’ in something not a structure or union
+  124 |     list->tail=currentNode->prev;
+      |                           ^~
+list.c:126:18: error: request for member ‘prev’ in something not a structure or union
+  126 |   if (currentNode->prev==NULL && currentNode->next==NULL){
+      |                  ^~
+list.c:126:45: error: request for member ‘next’ in something not a structure or union
+  126 |   if (currentNode->prev==NULL && currentNode->next==NULL){
+      |                                             ^~
+list.c:130:28: error: request for member ‘next’ in something not a structure or union
+  130 |   list->current=currentNode->next;
+      |                            ^~
+list.c:132:14: error: expected ‘;’ before ‘}’ token
+  132 |   return data
+      |              ^
+      |              ;
+  133 | }
+      | ~             
+cc1: all warnings being treated as errors
+Compilation failed
+61be7c4
