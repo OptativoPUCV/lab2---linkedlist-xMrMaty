@@ -12,3 +12,15 @@ list.c:34:7: error: ‘List’ {aka ‘struct List’} has no member named ‘si
       |       ^~
 Compilation failed
 9b57c0d
+Thu 24 Aug 2023 12:37:02 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:34:8: error: ‘size’ undeclared (first use in this function); did you mean ‘dysize’?
+   34 |   list=size=0;
+      |        ^~~~
+      |        dysize
+list.c:34:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+9c37861
