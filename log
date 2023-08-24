@@ -301,3 +301,16 @@ list.c:132:14: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 61be7c4
+Thu 24 Aug 2023 03:00:32 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:132:14: error: expected ‘;’ before ‘}’ token
+  132 |   return data
+      |              ^
+      |              ;
+  133 | }
+      | ~             
+Compilation failed
+3507d79
