@@ -24,3 +24,14 @@ list.c:34:8: error: ‘size’ undeclared (first use in this function); did you 
 list.c:34:8: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 9c37861
+Thu 24 Aug 2023 12:37:29 AM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:35:7: error: assignment to ‘List *’ {aka ‘struct List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   35 |   list=size=0;
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+9cc30e0
