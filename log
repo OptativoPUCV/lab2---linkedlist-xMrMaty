@@ -49,3 +49,17 @@ list.c:32:7: error: unused variable ‘size’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 53b368f
+Thu 24 Aug 2023 12:37:52 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:35:7: error: ‘List’ {aka ‘struct List’} has no member named ‘size’
+   35 |   list->size;
+      |       ^~
+list.c:32:7: error: unused variable ‘size’ [-Werror=unused-variable]
+   32 |   int size=0;
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d856e04
